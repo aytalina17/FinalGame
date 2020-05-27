@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<style type="text/css">
+		@font-face{
+		    font-family: Yanone Kaffeesatz;
+		    src: url(fonts/YanoneKaffeesatz-Regular.otf);
+        }
+		.fizra{
+			height: 200px;
+			width: 280px;
+			background-image: url(fizra.jpg);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 60%;
+			left: 10%;
+			padding-top: 85px;
+			opacity: 1;
+		}
+		.hover:hover{
+			opacity:0.75;
+            transition: 0.3s;
+            -webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+		.biology{
+			height: 200px;
+			width: 280px;
+			background-image: url(biology.jpg);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 15%;
+			left: 40%;
+			padding-top: 85px;
+		}
+		.english{
+			height: 200px;
+			width: 280px;
+			background-image: url(english.jpg);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 60%;
+			left: 72%;
+			padding-top: 85px;
+		}
+		.geroy{
+			height: 300px;
+			width: 180px;
+			background-image: url(geroy.png);
+			background-size: 100% 100%;
+		}
+		.skin{
+			height: 190px;
+			width: 98px;
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 55%;
+			left: 44.5%;
+			transition: 0.8s;
+		}
+		.message{
+			height: 150px;
+			width: 500px;
+			background: #71c4d1;
+			margin-left: 50px;
+			opacity: 0.9;
+			border-radius: 10px;
+		}
+        .okno{
+        	height: 450px;
+			width: 800px;
+			background: white;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 7%;
+			padding-top: 50px;
+			padding-left: 50px;
+			display: none;
+			transition: 0.7;
+			border-radius: 15px;
+        }
+        .location1{
+        	display: none;
+            padding-top: 3%;
+        }
+        .location2{
+        	display: none;
+            padding-top: 3%;
+        }
+        .location3{
+        	display: none;
+            padding-top: 3%;
+        }
+        .zadanie1{
+        	height: 600px;
+        	width: 1000px;
+        	margin-left: auto;
+        	margin-right: auto;
+        	background-color: white;
+        	opacity: 0.9;
+        }
+        .zadanie2{
+        	height: 600px;
+        	width: 1000px;
+        	margin-left: auto;
+        	margin-right: auto;
+        	background-color: white;
+        	opacity: 0.9;
+        }
+        .zadanie3{
+        	height: 600px;
+        	width: 1000px;
+        	margin-left: auto;
+        	margin-right: auto;
+        	background-color: white;
+        	opacity: 0.97;
+        }
+        .pole{
+        	height: 400px;
+        	width: 900px;
+        	background-image: url(volley.png);
+        	background-size: 100% 100%;
+        	margin-left: auto;
+        	margin-right: auto;
+        	margin-top: 88px;
+        }
+        .ball{
+        	height: 50px;
+        	width: 50px;
+        	position: absolute;
+        	top: 34%;
+        	left: 41%;
+        }
+        .one{
+        	height: 80px;
+        	width: 80px;
+        	transition: 0.5;
+        }
+        .other{
+        	height: 80px;
+        	width: 80px;
+        	transition: 0.5;
+        }
+	</style>
+</head>
+<body style="background-image: url(bgr.png); background-size: cover;">
+	<div class="main">
+	    <div class="fizra hover" style="border-radius: 15px; font-family: Yanone Kaffeesatz; font-size: 28px; color: #545454">
+	    	<p class="text1 text-center font-weight-bold">ФИЗИЧЕСКАЯ КУЛЬТУРА</p>
+	    </div>
+	    <div class="biology hover" style="border-radius: 15px; font-family: Yanone Kaffeesatz; font-size: 28px; color: #545454">
+	    	<p class="text1 text-center font-weight-bold">БИОЛОГИЯ</p>
+	    </div>
+	    <div class="english hover" style="border-radius: 15px; font-family: Yanone Kaffeesatz; font-size: 28px; color: #545454">
+	    	<p class="text1 text-center font-weight-bold">АНГЛИЙСКИЙ ЯЗЫК</p>
+	    </div>
+	    <div class="skin">
+	    	
+	    </div>
+	</div>
+	<div class="okno" style="font-family: Yanone Kaffeesatz; font-size: 23px; color: white">
+		<div class="row">
+			<div class="geroy">
+	    	   
+			</div>
+			<div class="message p-2">
+			    <p class="text">Приветсвую тебя! Сегодня у тебя важный день - день экзаменов! Ты можешь начать с любого предмета, только лишь кликнув на один из них. Внимательно читай инструкции и у тебя все получится. Удачи!</p>
+			</div>
+		</div>
+		<button class="btnM p-3 bg-info hover" style="margin-left: 600px; border-radius: 10px; color: white">OK</button>
+	</div>
+	<div class="location1">
+		<div class="zadanie1 p-2" style="border-radius: 15px; font-family: Yanone Kaffeesatz; font-size: 30px; color: #545454">
+			<h1>Время: <span class="time_loc1">10</span></h1>
+		    <h1>Cчет:  <span class="score_loc1"></span></h1>
+			<div class="pole">
+			    <div class="ball"></div>
+		    </div>
+		</div>
+	</div>
+	<div class="location2">
+		<div class="zadanie2 p-2" style="border-radius: 15px; font-family: Yanone Kaffeesatz; font-size: 30px; color: #545454">
+			<h1>Время: <span class="time_loc2">6</span></h1>
+            <div class="one" style="background-image: url(two.jpg); background-size: 100% 100%; position: absolute; top: 28%; left: 40%;"></div>
+            <div class="one" style="background-image: url(three.jpg); background-size: 100% 100%; position: absolute; top: 43%; left: 52%;"></div>
+            <div class="one" style="background-image: url(six.jpg); background-size: 100% 100%; position: absolute; top: 64%; left: 32%;"></div>
+            <div class="other" style="background-image: url(one.jpg); background-size: 100% 100%; position: absolute; top: 56%; left: 70%;"></div>
+            <div class="other" style="background-image: url(four.jpg); background-size: 100% 100%; position: absolute; top: 23%; left: 62%;"></div>
+            <div class="other" style="background-image: url(five.jpg); background-size: 100% 100%; position: absolute; top: 48%; left: 20%;"></div>
+		</div>
+	</div>
+	<div class="location3">
+		<div class="zadanie3 p-2" style="border-radius: 15px; font-family: Yanone Kaffeesatz; font-size: 30px; color: #545454">
+			<h2 class="text-center mt-2">Напиши перевод слова: <span class="slovo"></span></h2>
+			<textarea class="form-control mt-3" style="font-size: 28px;"></textarea>
+		    <button class="btn bg-info p-3 mt-4 hover ml-1" style="border-radius: 10px; color: white">ОТВЕТИТЬ</button>
+		</div>
+	</div>
+    <script type="text/javascript">
+    	let body = document.querySelector('body');
+    	let fizra = document.querySelector('.fizra');
+    	let biology = document.querySelector('.biology');
+    	let english = document.querySelector('.english');
+    	let skin = document.querySelector('.skin');
+    	let okno = document.querySelector('.okno');
+    	let main = document.querySelector('.main');
+    	let btnM = document.querySelector('.btnM');
+    	let location1 = document.querySelector('.location1');
+    	let location2 = document.querySelector('.location2');
+    	let location3 = document.querySelector('.location3');
+    	let text = document.querySelector('.text');
+    	let time_loc1 = document.querySelector('.time_loc1');
+    	let time_loc2 = document.querySelector('.time_loc2');
+    	let time_loc3 = document.querySelector('.time_loc3');
+    	let score_loc1 = document.querySelector('.score_loc1');
+    	let ball = document.querySelector('.ball');
+    	let one = document.querySelectorAll('.one');
+    	let other = document.querySelectorAll('.other');
+    	let slovo = document.querySelector('.slovo');
+    	let btn = document.querySelector('.btn');
+    	let textarea = document.querySelector('textarea');
+    	let words = ['образование', 'учитель', 'директор школы', 'расписание', 'каникулы', 'экзамены'];
+    	let translation = ['education', 'teacher', 'headmaster', 'timetable', 'holiday', 'exams'];
+    	let time1 = 10;
+    	let time2 = 6;
+    	let score1 = 0;
+    	let score2 = 0;
+    	let score3 = 0;
+    	let sdal1 = 0;
+    	let sdal2 = 0;
+    	let sdal3 = 0;
+    	//поялвение окна
+        let showMessage = function(){
+        	okno.style.display = 'block';
+        	main.style.display = 'none';
+        }
+        setTimeout(showMessage, 2000);
+        btnM.onclick = function(){
+        	okno.style.display = 'none';
+        	main.style.display = 'block';
+        }
+        //нажатие на локацию 1
+        fizra.onclick = function(){
+        	//меняем позицию игрока
+        	skin.style.top = '60%';
+        	skin.style.left = '15%';
+        	let changeLocation = function(){
+        		//скрываем main
+	            main.style.display = 'none';
+	            //меняем фон у body
+	            body.style.backgroundImage = 'url(bg1.png)';
+	            body.style.backgroundSize = 'cover';
+	            let showMessage2 = function(){
+	            	//выходит окно
+		            okno.style.display = 'block';
+		            text.innerHTML = 'Ты пришел на экзамен по физической культуре. Сегодня у нас волейбол. Сейчас ты должен за 10 секунд сделать 20 верхних передач. Кликай на мяч.';
+		            btnM.onclick = function(){
+		            	okno.style.display = 'none';
+			            location1.style.display = 'block';
+			            let Timer = function(){
+			            	time_loc1.innerHTML = time1;
+				        	time1 = time1 - 1;
+                            ball.onclick = function(){
+                                score1 = score1 + 1;
+                                score_loc1.innerHTML = score1;
+                                if(score1 == 20 && time1 > 0){
+                                	alert('Молодец, ты сдал экзамен');
+                                	sdal1 = 1;
+                                	clearInterval(stop1);
+                                	let finish = function(){
+                                		location1.style.display = 'none';
+	                                	main.style.display = 'block';
+	                                	body.style.backgroundImage = 'url(bgr.png)';
+                                	}
+                                	setTimeout(finish, 1000);
+                                }
+                            }
+                            if(time1 == 0){
+                                alert('Увы, ты не сдал экзамен');
+                                clearInterval(stop1);
+                                let finish = function(){
+                                	location1.style.display = 'none';
+	                                main.style.display = 'block';
+	                                body.style.backgroundImage = 'url(bgr.png)';
+                                }
+                                setTimeout(finish, 1000);
+                            }
+				        }
+				        let stop1 = setInterval(Timer, 1000);
+			        }
+			        
+	            }
+	            setTimeout(showMessage2, 800);
+        	}
+        	setTimeout(changeLocation, 1500);
+        }
+        //нажатие на локацию 2
+        biology.onclick = function(){
+        	//меняем позицию игрока
+        	skin.style.top = '15%';
+        	skin.style.left = '45%';
+        	let changeLocation = function(){
+        		//скрываем main
+	            main.style.display = 'none';
+	            //меняем фон у body
+	            body.style.backgroundImage = 'url(bg2.png)';
+	            body.style.backgroundSize = 'cover';
+	            let showMessage3 = function(){
+                    //выходит окно
+		            okno.style.display = 'block';
+		            text.innerHTML = 'Ты пришел на экзамен по биологии. Сейчас ты должен за 6 секунд найти 3 одноклеточных организма. Кликай на картинки.';
+		            btnM.onclick = function(){
+		            	okno.style.display = 'none';
+			            location2.style.display = 'block';
+			            let Timer = function(){
+			            	
+			            	time2 = time2 - 1; 
+			            	time_loc2.innerHTML = time2;
+                            for(let i = 0; i<3; i++){
+                            	one[i].onclick = function(){
+                                    score2 = score2 + 1;
+                                    one[i].style.display = 'none';
+                            	}
+                            }
+                            for(let i = 0; i<3; i++){
+                            	other[i].onclick = function(){
+                                    other[i].style.display = 'none';
+                            	}
+                            }
+                            if(score2 == 3 && time2 > 0){
+                            	alert('Молодец, ты сдал экзамен');
+                                sdal2 = 1;
+                                clearInterval(stop2);
+                                let finish = function(){
+                                	location2.style.display = 'none';
+	                                main.style.display = 'block';
+	                                body.style.backgroundImage = 'url(bgr.png)';
+                                }
+                                setTimeout(finish, 1000);
+                            }
+                            if(time2 == 0){
+                                alert('Увы, ты не сдал экзамен');
+                                clearInterval(stop2);
+                                let finish = function(){
+                                	location2.style.display = 'none';
+	                                main.style.display = 'block';
+	                                body.style.backgroundImage = 'url(bgr.png)';
+                                }
+                                setTimeout(finish, 1000);
+                            }
+			            }
+			            let stop2 = setInterval(Timer, 1000);
+			        }
+	            }
+	            setTimeout(showMessage3, 800);
+        	}
+        	setTimeout(changeLocation, 1500);
+        }
+        //нажатие на локацию 3
+        english.onclick = function(){
+        	//меняем позицию игрока
+        	skin.style.top = '60%';
+        	skin.style.left = '77%';
+        	let changeLocation = function(){
+        		//скрываем main
+	            main.style.display = 'none';
+	            //меняем фон у body
+	            body.style.backgroundImage = 'url(bg3.png)';
+	            body.style.backgroundSize = 'cover';
+	            let showMessage4 = function(){
+                    //выходит окно
+		            okno.style.display = 'block';
+		            text.innerHTML = 'Ты пришел на экзамен по английскому языку. Сейчас ты должен написать перевод 6 слов. Записывай свои ответы в текстовое поле.';
+		            btnM.onclick = function(){
+		            	okno.style.display = 'none';
+			            location3.style.display = 'block';
+			            slovo.innerHTML = words[0];
+			            btn.onclick = function(){
+			            	if(textarea.value == translation[0]){
+			            		score3 = score3 + 1;
+			            		slovo.innerHTML = words[1];	
+			            	} else {
+			            		slovo.innerHTML = words[1];
+			            	}
+			            	btn.onclick = function(){
+			            		if(textarea.value == translation[1]){
+					                score3 = score3 + 1;
+					                slovo.innerHTML = words[2];
+				            	} else {
+					                slovo.innerHTML = words[2];
+					            }
+					            btn.onclick = function(){
+					            	if(textarea.value == translation[2]){
+							            score3 = score3 + 1;
+							            slovo.innerHTML = words[3];
+							        } else {
+							            slovo.innerHTML = words[3];
+							        }
+							        btn.onclick = function(){
+                                        if(textarea.value == translation[3]){
+									        score3 = score3 + 1;
+									        slovo.innerHTML = words[4];	
+									    } else {
+									        slovo.innerHTML = words[4];
+									    }
+									    btn.onclick = function(){
+                                            if(textarea.value == translation[4]){
+											    score3 = score3 + 1;
+											    slovo.innerHTML = words[5];
+											} else {
+											    slovo.innerHTML = words[5];
+											}
+											btn.onclick = function(){
+											    if(textarea.value == translation[5]){
+													score3 = score3 + 1;
+												    if(score3 == 6){
+														alert('Молодец, ты сдал экзамен');
+														let finish = function(){
+												            location3.style.display = 'none';
+													        main.style.display = 'block';
+													        body.style.backgroundImage = 'url(bgr.png)';
+													        sdal3 = 1;
+													        let results = function(){
+													        	okno.style.display = 'block';
+													        	main.style.display = 'none';
+														        if(sdal1 == 1 && sdal2 == 1 && sdal3 == 1){
+														        	text.innerHTML = 'Молодец! Ты сдал все экзамены. Впереди 3 месяца отдыха! УРА';
+														            btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 1 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру и биологию. Впереди пересдача по английскому...';
+                                                                    btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 0 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру и английский. Впереди пересдача по биологии...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 1 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только биологию и английский. Впереди пересдача по физкультуре...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 0 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру. Впереди пересдача по биологии и английскому...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 1 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только биологию. Впереди пересдача по физкультуре и английскому...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 0 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только английский. Впереди пересдача по физкультуре и биологии...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 0 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты ничего не смог сдать. Впереди пересдачи...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+													        }
+													        setTimeout(results, 1000);
+												        }
+												        setTimeout(finish, 1000);
+													} else {
+														alert('Увы, ты не сдал экзамен');
+														let finish = function(){
+												            location3.style.display = 'none';
+													        main.style.display = 'block';
+													        body.style.backgroundImage = 'url(bgr.png)';
+													        let results = function(){
+													        	okno.style.display = 'block';
+													        	main.style.display = 'none';
+														        if(sdal1 == 1 && sdal2 == 1 && sdal3 == 1){
+														        	text.innerHTML = 'Молодец! Ты сдал все экзамены. Впереди 3 месяца отдыха! УРА';
+														            btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 1 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру и биологию. Впереди пересдача по английскому...';
+                                                                    btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 0 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру и английский. Впереди пересдача по биологии...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 1 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только биологию и английский. Впереди пересдача по физкультуре...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 0 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру. Впереди пересдача по биологии и английскому...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 1 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только биологию. Впереди пересдача по физкультуре и английскому...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 0 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только английский. Впереди пересдача по физкультуре и биологии...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 0 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты ничего не смог сдать. Впереди пересдачи...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+													        }
+													        setTimeout(results, 1000);
+												        }
+												        setTimeout(finish, 1000);
+													}
+												} else {
+													alert('Увы, ты не сдал экзамен');
+													let finish = function(){
+											            location3.style.display = 'none';
+												        main.style.display = 'block';
+												        body.style.backgroundImage = 'url(bgr.png)';
+												        let results = function(){
+													        	okno.style.display = 'block';
+													        	main.style.display = 'none';
+														        if(sdal1 == 1 && sdal2 == 1 && sdal3 == 1){
+														        	text.innerHTML = 'Молодец! Ты сдал все экзамены. Впереди 3 месяца отдыха! УРА';
+														            btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 1 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру и биологию. Впереди пересдача по английскому...';
+                                                                    btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 0 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру и английский. Впереди пересдача по биологии...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 1 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только биологию и английский. Впереди пересдача по физкультуре...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 1 && sdal2 == 0 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только физкультуру. Впереди пересдача по биологии и английскому...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 1 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты сдал только биологию. Впереди пересдача по физкультуре и английскому...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 0 && sdal3 == 1){
+														        	text.innerHTML = 'Увы! Ты сдал только английский. Впереди пересдача по физкультуре и биологии...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+														        if(sdal1 == 0 && sdal2 == 0 && sdal3 == 0){
+														        	text.innerHTML = 'Увы! Ты ничего не смог сдать. Впереди пересдачи...';
+														        	btnM.onclick = function(){
+														            	location3.style.display = 'none';
+																        main.style.display = 'none';
+																        body.style.background = 'black';
+																        okno.style.display = 'none';
+														            }
+														        }
+													        }
+													        setTimeout(results, 1000);
+											        }
+											        setTimeout(finish, 1000);
+												}
+											}            		
+									    }
+							        }
+					            }
+			            	}
+			            }
+		            }
+	            }
+	            setTimeout(showMessage4, 800);
+        	}
+        	setTimeout(changeLocation, 1500);
+        }
+    </script>
+</body>
+</html>
